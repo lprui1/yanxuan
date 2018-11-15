@@ -1,0 +1,233 @@
+.cartbox{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction:column;       
+    .cartlistbox{
+        width:100%;
+        height:100%;
+        -webkit-flex:1;
+        overflow: auto;
+        display:flex;
+        flex-direction: column;
+        position:relative;
+        //商品列表头部
+        .shopheader{
+            padding:rem(30) 0 rem(45) 0;
+            background:#fff;
+            border-bottom:1px solid #ccc;
+            span{
+                font-size:rem(40);
+                color:#b5282e;
+                position: absolute;
+                top:rem(31);
+                left:rem(28);
+            }
+            h4{
+                font-size:rem(40);
+                text-align: center;
+            }
+        }
+        .section{
+            width:100%;
+            height:100%;
+            flex:1;
+            overflow: auto;
+            // background:#fff;
+            // padding:rem(50) 0;
+            //没有商品的状态
+            .notshop{
+                width:100%;
+                background:#fff;
+                .nolist{
+                    width:100%;
+                    height:rem(625);
+                    background:#f7f7f7;;
+                    div{
+                        width:rem(252);
+                        padding:rem(123) 0;
+                        margin:0 auto;
+                        img{
+                            width:rem(252);   
+                        }
+                        p{
+                            font-size:rem(36);
+                            padding-top:rem(43);
+                            color:#9a9a9a;
+                        }
+                    }
+                    
+                }
+            }
+            //有状态下的列表
+            .shoplist{
+                position:relative;
+                background:#fff;
+                //列表
+                dl{
+                    display: flex;
+                    border-bottom:1px solid #fbfbfb;
+                    padding:rem(42);
+                    position: relative;
+                    dt{
+                        width:40%;
+                        padding-right:rem(20);
+                        display: flex;
+                        justify-content: space-between;
+                        .tui-checkbox{
+                            display: block;
+                            margin-top:rem(50);
+                        }
+                        img{
+                            width:rem(228);
+                            height:rem(228);
+                            // height:rem(228);
+                        }
+                    }
+                    dd{
+                        width:60%;
+                        -webkit-flex:1;
+                        padding:rem(11) 0 0 rem(30);
+                    p:first-child{
+                        font-size:rem(38);
+                    } 
+                    p:nth-child(2){
+                        b{
+                            font-size:rem(26);
+                            color:#b5272d;
+                        }
+                        s{
+                           font-size:rem(26);
+                           padding-left:rem(30); 
+                        }
+                    }
+                    p:last-child{
+                        position: absolute;
+                        right:rem(45);
+                        bottom:rem(35);
+                            button{
+                                background:#fff;
+                                outline:none;
+                                border:none;
+                                border:1px solid #ccc;
+                                font-size:rem(30);
+                                padding:rem(26);
+                            }
+                    }
+                    }
+                }
+            }
+            //猜你喜欢
+            .like{
+                margin-top:rem(39);
+                width:100%;
+                background:#fff;
+                h4{
+                    font-size:rem(40);
+                    padding:rem(40) 0;
+                    text-align:center;
+                }
+                ul{
+                    display: flex;
+                    flex-wrap:wrap;
+                    justify-content: space-around;
+                    li{
+                        width:rem(489);
+                        padding-bottom:rem(101);
+                        dl{
+                            position: relative;
+                            dt{
+                                img{
+                                    width:rem(489);
+                                    display:block;
+                                }
+                            }
+                            dd{
+                                p:first-child{
+                                    font-size:rem(40);
+                                    color:#333;
+                                    white-space:nowrap;
+                                    overflow:hidden;
+                                    text-overflow:ellipsis;
+                                    padding-top:rem(14);
+                                }
+                                p:nth-child(2){
+                                    font-size:rem(30);
+                                    color:#999;
+                                    padding-top:rem(7);
+                                    position: absolute;
+                                    top:rem(384);
+                                    left:0;
+                                    background:#f0ece1;
+                                    width:100%;
+                                    padding:rem(37) 0;
+                                    text-indent:rem(16);
+                                    color:#a18d65;
+                                    font-size:rem(29);
+                                    letter-spacing:rem(1);
+                                }
+                                p:last-child{
+                                    font-size:rem(30);
+                                    padding-top:rem(15);
+                                    display: flex;
+                                    justify-content: space-between;
+                                    b{
+                                        color:#ab2b2b;
+                                    }
+                                    span{
+                                        color:#9d9d9d;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //全选
+        .checkall{
+            width:100%;
+            height:rem(146);
+            background:#fff;
+            display:flex;
+            justify-content: space-between;
+            position: absolute;
+            bottom:0;
+            left:0;
+            .checkleft{
+                width:20%;
+                height:rem(146);
+                text-align: left;
+                padding-top:rem(20);
+                padding-left:rem(42);
+                .tui-checkbox{
+                    margin-top:rem(30);
+                }
+                .qx{
+                    font-size:rem(36);
+                }
+            }
+            .checkright{
+                width:80%;
+                height:rem(146);
+                text-align: right;
+                b{
+                    font-size:rem(37);
+                    color:#a42c2e;
+                    padding-right:rem(47);
+                }
+                button{
+                    width:rem(346);
+                    height:100%;
+                    background:#b82925;
+                    font-size:rem(42);
+                    color:#fff;
+                    letter-spacing:2px;
+                    border:none;
+                    outline:none;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,39 @@
+.selectdetail{
+    background:#fff;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    position: relative;
+    //上一页
+    a.shang{ 
+        position: absolute;
+    }
+    .cutlistheader{
+        width:100%;
+        height:rem(130);
+        h4{
+            font-size:rem(40);
+            padding:rem(40) 0;
+            text-align:center;
+        }
+    }
+    //内容
+    .newsdetail{
+        width:100%;
+        height:100%;
+        background:#fff;
+        h5{
+            text-align: center;
+        }
+        p{
+            font-size:rem(40);
+            line-height:rem(60);
+            padding:0 rem(20);
+            background:#fff;
+            img{
+                width:100% !important;
+            }
+        }
+    }
+}

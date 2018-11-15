@@ -1,0 +1,45 @@
+//页脚
+.indexfooter{
+    width:100%;
+    height:rem(161);
+    z-index:200;
+    ul{
+        width:100%;
+        height:rem(161);
+        padding:0 rem(97);
+        display: flex;
+        justify-content: space-between;
+        background:#f5f5f5;
+      li{
+        text-align:center;
+        font-weight: bold;
+        a{
+            color:#7d7d7d;
+          p{
+            margin:0;
+            span{
+              font-size:rem(69);
+            }
+          }
+          b{
+              position: relative;
+              top:rem(-25);
+              text-align:center;
+              color:#5b5b5b;
+              font-size:rem(34)
+          }
+        }
+      }
+      li:nth-child(3) {
+        position: relative;
+        #shul{
+          position: absolute;
+        }
+      }
+      li.active{
+          a,b{
+            color:#a01111;
+          }
+      }
+    }
+}

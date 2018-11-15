@@ -1,0 +1,115 @@
+.sort{
+    width:100%;
+    height:100%;
+    background:#fff;
+    display: flex;
+    flex-direction:column;
+    .header{
+        height:rem(115);
+        padding:rem(14) 0 rem(19) rem(42);
+        border-bottom:1px solid #ccc;
+        input{
+            // width:rem(696);
+            width:64%;
+            height:rem(85);
+            background:#f7f7f7;
+            outline:none;
+            border:none;
+            font-size:rem(38);
+            text-indent:rem(92);
+            border-radius:30px;       
+        }
+    }
+    //sortmain
+    .sortmain{
+        width:100%;
+        height:100%;
+        -webkit-flex:1;
+        overflow: auto;
+        display: flex;
+        justify-content: space-between;
+        padding-top:rem(33);
+        //sortleft
+        .sortleft{
+            width:25%;
+            height:100%;
+            padding:rem(30) 0;
+            border-right:1px solid #ccc;
+            ul{
+                height:100%;
+                li{
+                    text-align:center;
+                    span{
+                        font-size:rem(39);
+                        padding:rem(31) 0;
+                    }
+                    
+                }
+                li:hover{
+                    border-left:rem(7) solid #b9282d;
+                    span{
+                        color:#b9282d;
+                    }
+                }
+                li.active{
+                    border-left:rem(7) solid #b9282d;
+                    span{
+                        color:#b9282d;
+                    }
+                }
+            }
+        }
+        //sortright
+        .sortright{
+            width:74%;
+            height:100%;
+            -webkit-flex:1;
+            overflow:auto;
+            padding-top:rem(18);
+            //轮播图
+            .swiper{
+                width:100%;
+                .swiper-container{
+                    width:100%;
+                    .swiper-wrapper{
+                        width:100%;
+                        .swiper-slide{
+                            width:100%;
+                            img{
+                                width:100%;
+                                padding:rem(0) rem(28) 0 rem(18);
+                            }
+                        }
+                    }
+                }
+            }
+            //分类列表
+            .sortlist{
+                width:100%;
+                padding-top:rem(112);
+                ul{
+                    width:100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    // justify-content: space-around;
+                    li{
+                        width:33.3%;
+                        float: left;
+                        text-align: center;
+                        padding-bottom:rem(83);
+                        p{
+                            img{
+                                width:rem(131);
+                                height:rem(131);
+                            }
+                            span{
+                                font-size:rem(33);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

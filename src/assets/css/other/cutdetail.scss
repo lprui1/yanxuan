@@ -1,0 +1,180 @@
+.cutdetail{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    // position: relative;
+    // //上一页
+    // a.shang{ 
+    //     position: absolute;
+    //     top:rem(10);
+    //     left:rem(20);
+    //     width:rem(96);
+    //     height:rem(96);
+    //     text-align:center;
+    //     border:rem(3) solid #fff;
+    //     border-radius:100%;
+    //     display:block;
+    //     color:#484648;
+    //     color:#484648;
+    //     span{
+    //         color:#3f3f3f;
+    //         border-radius:100%;
+    //         background:#fff;
+    //         display:block;
+    //         width:rem(78);
+    //         height:rem(78);
+    //         line-height:rem(78);
+    //         text-align:center;
+    //         position: absolute;
+    //         top:rem(9);
+    //         left:rem(9);
+    //     }
+    // }
+    .section{
+        width:100%;
+        height:100%;
+        -webkit-flex:1;
+        overflow:auto;
+    }
+    //     //头部
+    //     .header{
+    //         width:100%;
+    //         height:rem(851);
+    //         img{
+    //             width:100%;
+    //             height:rem(851);
+    //         }
+    //     }
+    //     //
+    //     .main{
+    //         width:100%;
+    //         height:100%;
+    //         //信息
+    //         ul.mess{
+    //             width:100%;
+    //             display:flex;
+    //             flex-direction: column;
+    //             box-sizing:border-box;
+    //             padding:rem(46);
+    //             background:#fff;
+    //             li{
+    //                 b{
+    //                     font-size:rem(44);
+    //                 }
+    //                 p{
+    //                     font-size:rem(36);
+    //                     color:#999;
+    //                 }
+    //             }
+    //             li:first-child{
+    //                 padding-bottom:rem(20);
+    //             }
+    //             li:last-child{
+    //                 width:100%;
+    //                 display:flex;
+    //                 justify-content: space-between;
+    //                 padding-top:rem(44);
+    //                 .left{ 
+    //                     span:first-child{
+    //                         color:#b5272d;
+    //                         font-size:rem(33);
+    //                         margin-right:rem(35);
+    //                         font-weight:bold;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //         //介绍
+    //         .recommend{
+    //             margin-top:rem(44);
+    //             width:100%;
+    //             height:100%;
+    //             background:#fff;
+    //             ul{
+    //                 display:flex;
+    //                 justify-content: space-around;
+    //                 li{
+    //                     width:50%;
+    //                     text-align:center;
+    //                     font-size:rem(40);
+    //                     padding:rem(33) 0;
+    //                     border-bottom:2px solid #ccc;
+    //                     a{
+    //                         color:#999;
+    //                     }
+    //                 }
+    //                 li.active{
+    //                     border-bottom:2px solid #b4282d;
+    //                     a{
+    //                         color:#b4282d;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //         //详细介绍
+    //         .message{
+    //             width:100%;
+    //             height:100%;
+    //             // box-sizing:border-box;
+    //             #cutmessage{
+    //                 width:100%;
+    //                 height:100%;
+    //                 // background:red;
+    //                 ul{
+    //                     width:100% !important;
+    //                     padding:rem(55);
+    //                     box-sizing:border-box;
+    //                     li{
+    //                         width:100% !important;
+    //                         display: flex;
+    //                         flex-direction: column;
+    //                         // justify-content: space-between;
+    //                         border-bottom:1px solid #ccc;
+    //                         p{
+    //                             width:100%;
+    //                             font-size:rem(30);
+    //                             line-height:rem(70);
+    //                             letter-spacing:rem(2);
+    //                             display: flex;
+    //                             .name{
+    //                                 width:20%;
+    //                                 background:red;
+    //                             }
+    //                             .value{
+    //                                 width:80%;
+    //                                 background:green;
+    //                             }  
+    //                         }    
+    //                     }
+    //                 }
+    //                 p{
+    //                     background:#fff;
+    //                     .img-lazyload{
+    //                         width:100% !important;
+    //                         height:auto !important;
+    //                     } 
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+    //footer
+    .cutfooter{
+        width:100%;
+        height:rem(136);
+        background:#b5272d;
+        p{
+             text-align:center;
+            
+             a{
+                 color:#fff;
+                 font-size:rem(37);
+             }
+        }
+        
+    }
+    
+    
+    
+}

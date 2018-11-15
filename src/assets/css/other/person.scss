@@ -1,0 +1,142 @@
+.personbox{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    .person{
+        width:100%;
+        height:100%;
+        -webkit-flex:1;
+        overflow: auto;
+        //头部
+        .personheader{
+            width:100%;
+            height:rem(500);
+            background-color:red;
+            background-image:url('../../img/person.jpg');
+            background-size:100% 100%;
+            dl{
+                padding:rem(138) rem(44);
+                display:flex;
+                dt{
+                    img{
+                        width:rem(216);
+                        border-radius:100%;
+                    }
+                }
+                dd{
+                    padding-left:rem(44);
+                    p{
+                        color:#fff;
+                        b{
+                            font-size:rem(41);
+                            font-weight:normal;
+                        }  
+                        span{
+                            font-size:rem(30);
+                            background:#b3a276;
+                            padding:rem(5) rem(33);
+                        }
+                    }
+                }
+            }
+        }
+        //公告
+        .notice{
+            padding:rem(35) rem(45);
+            background:#fff;
+            p{
+                letter-spacing:rem(2);
+                span{
+                    font-size:rem(47);
+                    padding-right:rem(30);
+                    color:#b52e35;
+                }
+                span:last-child{
+                    font-size:rem(36);
+                }
+            }
+        }
+        //订单
+        .order{
+            margin-top:rem(25);
+            width:100%;
+            background:#fff;
+            .orderheader{
+                display:flex;
+                justify-content: space-between;
+                padding:rem(41) rem(25) rem(75) rem(47);
+                p{
+                    span:first-child{
+                        font-size:rem(60);
+                        color:#debc63;
+                    }
+                    span:last-child{
+                        font-size:rem(40);
+                    }
+                }
+            }
+            ul{
+                display:flex;
+                justify-content: space-around;
+                padding-bottom:rem(31);
+                li{
+                    width:25%;
+                    text-align:center;
+                     span{
+                         font-size:rem(74);
+                         font-weight:bold;
+                     }
+                     p{
+                         font-size:rem(33);
+                         padding-top:rem(15);
+                     }
+                }
+            }
+        }
+        //列表
+        .personlist{
+            margin-top:rem(25);
+            background:#fff;
+            padding-top:rem(54);
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                // padding:rem() 0;
+                // padding-bottom:rem(102);
+                li{
+                    width:33.3%;
+                    text-align:center;
+                    a{
+                        span{
+                            font-size:rem(73);
+                        }  
+                        p{
+                            font-size:rem(34);
+                            padding:rem(28) 0;
+                            color:#272727;
+                        }            
+                        .icon-daifukuan,.icon-kanjia{
+                            color:red;
+                        }
+                        .icon-liquan,.icon-shoucang{
+                            color:#ebbd65;
+                        }
+                        .icon-dizhi,.icon-lianxikefu{
+                            color:#8397cc;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        //清欢严选
+        .title{
+            text-align:center;
+            padding-top:rem(45);
+            color:#969696;
+            font-size:rem(34);
+        }
+    }
+}

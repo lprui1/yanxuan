@@ -1,0 +1,110 @@
+.newaddress{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    position: relative;
+    //上一页
+    a.shang{ 
+        position: absolute;
+        top:rem(10);
+        left:rem(20);
+        width:rem(96);
+        height:rem(96);
+        text-align:center;
+        border:rem(3) solid #fff;
+        border-radius:100%;
+        display:block;
+        color:#484648;
+        span{
+            color:#3f3f3f;
+            border-radius:100%;
+            background:#fff;
+            display:block;
+            width:rem(78);
+            height:rem(78);
+            line-height:rem(78);
+            text-align:center;
+            position: absolute;
+            top:rem(9);
+            left:rem(9);
+        }
+    }
+    //头部
+    .newaddressheader{
+        width:100%;
+        height:rem(118);
+        background:#fff;
+        h4{
+            font-size:rem(38);
+            line-height:rem(118);
+            text-align:center;
+        }
+    }
+    //内容
+    .newsection{
+        width:100%;
+        height:100%;
+        .newlist{
+            width:100%;
+            padding:0 rem(40);
+            background:#fff;
+            li{
+                width:100%;
+                height:rem(126);
+                line-height:rem(126);
+                border-bottom:rem(2) solid #f1f1f1;
+                font-size:rem(36);
+                display:flex;
+                justify-content: space-between;
+                select{
+                    border:none;
+                }
+                label{
+                    width:18%;
+                    display: inline-block;
+                }
+                input{
+                    width:82%;
+                    height:rem(123);
+                    border:none;
+                    outline:none;
+                    text-indent:rem(82);
+                }
+            }
+        }
+        //newbutton
+        .newbutton{
+            padding:0 rem(44);
+            p{
+                padding-top:rem(44);
+                width:100%;
+                button{
+                    width:100%;
+                    height:rem(114);
+                    line-height:rem(114);
+                    font-size:rem(50);
+                    border:none;
+                    outline:none;
+                    color:#fff;
+                    border-radius:rem(5);
+                }
+                //保存
+                .save{
+                    background:red;
+                }
+                //读取
+                .read{
+                    background:green;
+                }
+                //cancel取消
+                .cancel{
+                    background:#fff;
+                    border:1px solid #c9c9c9;
+                    color:#1d1d1d;
+                }
+            }
+            
+        }
+    }
+}

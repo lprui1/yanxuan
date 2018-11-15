@@ -1,0 +1,229 @@
+.confirm{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    position: relative;
+    //上一页
+    a.shang{ 
+        position: absolute;
+    }
+    //头部
+    .confirmheader{
+        width:100%;
+        height:rem(118);
+        background:#fff;
+        h4{
+            font-size:rem(38);
+            line-height:rem(118);
+            text-align:center;
+        }
+    }
+    //内容
+    .confirmsection{
+        width:100%;
+        height:100%;
+        overflow:auto;
+        -webkit-flex:1;
+        a{
+            color:#000;
+        }
+        //点击新增收货地址
+        .confirmtop{
+            width:100%;
+            background:#fff;
+            display:flex;
+            justify-content: space-between;
+            padding:rem(30) rem(42);
+            box-sizing: border-box;
+            border-bottom:1px dashed #4882c1;
+            .left{
+                color:#000;
+                button{
+                    width:rem(84);
+                    height:rem(84);
+                    background:#417ef1;
+                    color:#fff;
+                    border:none;
+                    outline:none;
+                    border-radius:rem(10);
+                    font-size:rem(46);
+                }
+                span{
+                    font-size:rem(36);
+                    padding-left:rem(47);
+                }
+            }
+            a{
+                color:#bebebe;
+                font-size:rem(38);
+                line-height:rem(100);
+            }
+        }
+         //有地址
+         .hasaddress{
+            width:100%;
+            dl{
+                width:100%;
+                height:rem(217);
+                background:#fff;
+                display:flex;
+                justify-content: space-between;
+                padding:0 rem(40);
+                border-bottom:rem(3) solid #f5f5f5;
+                position: relative;
+                dt{
+                    display:flex;
+                    justify-content: space-between;
+                    .tui-checkbox{
+                        margin-top:rem(80);
+                    }
+                    .left{
+                        padding-left:rem(100);
+                        padding-top:rem(45);
+                        p{
+                            font-size:rem(40);
+                            line-height:rem(65);
+                            span{
+                                padding-left:rem(14);
+                            }
+                        }
+                        //具体地址
+                        .dizhi{
+                            color:#888;
+                            font-size:rem(31);
+                        }
+                    }
+                }
+                dd{
+                    display:flex;
+                    justify-content: space-between;
+                    line-height:rem(217);
+                   span{
+                       font-size:rem(45);
+                   }
+                }
+            }
+        }
+        //商品列表
+        .shoplist{
+            width:100%;
+            margin-top:rem(26);
+            background:#fff;
+            .shoplistp{
+                padding:rem(42);
+                font-size:rem(37);
+                // border-bottom:1px solid #ccc;
+            }
+            //列表
+            .shoplistmain{
+                dl{
+                    padding:rem(42);
+                    font-size:rem(32);
+                    border-top:1px solid #eeeeee;
+                    width:100%;
+                    display:flex;
+                    // justify-content: space-between;
+                    dt{
+                        display: flex;
+                        width:rem(228);
+                        img{
+                            width:rem(228);
+                            height:rem(228);
+                        }
+                    }
+                    dd{
+                        display:flex;
+                        justify-content: space-between;
+                        padding-top:rem(21);
+                        padding-left:rem(29);
+                        ul{
+                            width:100%;
+                            li{
+                                display:flex;
+                                justify-content: space-between;
+                                p{
+                                    line-height:rem(56); 
+                                    letter-spacing:rem(2);  
+                                }
+                                p:first-child{
+                                    width:rem(500);
+                                    text-align:left;
+                                }
+                            }
+                            li.xuanze{
+                                padding-top:rem(50);
+                                color:#999;
+                            }
+                        }
+                         
+                    }
+                }
+            }
+            //
+        }
+        //配送方式
+        .methods{
+            margin-top:rem(26);
+            background:#fff;
+            p{
+                width:100%;
+                height:rem(102);
+                line-height:rem(102);
+                border-top:1px solid #eee;
+                display: flex;
+                justify-content: space-between;
+                padding:0 rem(44);
+                font-size:rem(36);  
+                span:first-child{
+                    width:15%;
+                }
+                input{
+                    width:75%;
+                    border:none;
+                    outline:none;
+                }
+            }
+        }
+        //商品金额
+        .shopmoney{
+            width:100%;
+            height:100%;
+            background:#fff;
+            margin-top:rem(26);
+            p{
+                width:100%;
+                height:rem(102);
+                line-height:rem(102);
+                border-top:1px solid #eee;
+                display: flex;
+                justify-content: space-between;
+                padding:0 rem(44);
+                font-size:rem(36);  
+            }
+        }
+        
+    }
+    //页脚
+    .confirmfooter{
+        width:100%;
+        height:rem(146);
+        background:#fff;
+        border-top:1px solid #ccc;
+        text-align:right;
+        font-size:rem(42);
+        span{
+            color:#b63e40;
+            padding-right:rem(44);
+        }
+        button{
+            width:rem(360);
+            height:rem(146);
+            background:#b92732;
+            color:#fff;
+            border:none;
+            outline:none;
+            letter-spacing:rem(2);
+        }
+    }
+}

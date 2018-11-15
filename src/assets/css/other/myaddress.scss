@@ -1,0 +1,110 @@
+.myaddress{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    position: relative;
+    //上一页
+    a.shang{ 
+        position: absolute;
+    }
+    //头部
+    .myaddressheader{
+        width:100%;
+        height:rem(118);
+        background:#fff;
+        h4{
+            font-size:rem(38);
+            line-height:rem(118);
+            text-align:center;
+        }
+    }
+    .myaddressmain{
+        width:100%;
+        height:100%;
+        -webkit-flex:1;
+        overflow:auto;
+        //没有地址
+        .noaddress{
+            width:100%;
+            height:100%;
+            img{
+                width:rem(300);
+                margin:rem(375) rem(386) 0;
+            }
+        }
+        //有地址
+        .hasaddress{
+            width:100%;
+            dl{
+                width:100%;
+                height:rem(217);
+                background:#fff;
+                display:flex;
+                justify-content: space-between;
+                padding:0 rem(40);
+                border-bottom:rem(3) solid #f5f5f5;
+                position: relative;
+                box-sizing: border-box;
+                dt{
+                    width:80%;
+                    display:flex;
+                    justify-content: space-between;
+                    .tui-checkbox{
+                        margin-top:rem(70);
+                    }
+                    .left{
+                        padding-left:rem(100);
+                        padding-top:rem(45);
+                        width:80%;
+                        p{
+                            font-size:rem(40);
+                            line-height:rem(65);
+                            overflow: hidden !important;
+                            white-space: nowrap !important;
+                            text-overflow: ellipsis !important;
+                            a{
+                                span{
+                                    padding-left:rem(14);
+                                }
+                            }
+                        }
+                        //具体地址
+                        .dizhi{
+                            color:#888;
+                            font-size:rem(31);
+                        }
+                    }
+                }
+                dd{
+                    display:flex;
+                    line-height:rem(217);
+                   span{
+                       font-size:rem(45);
+                   }
+                }
+            }
+        }
+    }
+    //页脚新增地址
+    .addmyaddress{
+        width:100%;
+        height:rem(144);
+        a{
+            button{
+                width:100%;
+                height:100%;
+                background:#fff;
+                border:none;
+                outline:none;
+                font-size:rem(38);
+                color:#b4292e;
+                span{
+                    font-size:rem(45);
+                    padding-right:rem(13);
+                }
+            }
+        }
+        
+    }
+}
