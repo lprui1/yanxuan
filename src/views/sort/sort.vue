@@ -4,8 +4,11 @@
             <input type="text" name="" id="" placeholder="搜索商品">
         </div>
         <div class="sortmain">
-            <Sortleft></Sortleft>
-            <Sortright></Sortright>    
+            
+                <Sortleft></Sortleft>
+                <!-- <scroller ref="my_scroller"> -->
+                    <Sortright></Sortright>
+                <!-- </scroller>     -->
         </div>
         <Footer></Footer>
     </div>

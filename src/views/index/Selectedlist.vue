@@ -1,35 +1,23 @@
 <template>
     <div class="Selectedlist">
         <div class="header">
-            <router-link to="/">&lt; </router-link>
+            <router-link to="/" class="shang">&lt; </router-link>
             <h4>严选专栏</h4>
         </div>
         <div class="section">
             <!--横向滚动-->
             <ul class="heng">
-                <li>
-                    <img src="../../img/zhuanlan.jpg" alt="">
-                </li>
-                <li>
-                    <img src="../../img/zhuanlan.jpg" alt="">
-                </li>
-                <li>
-                    <img src="../../img/zhuanlan.jpg" alt="">
-                </li>
-                <li>
-                    <img src="../../img/zhuanlan.jpg" alt="">
-                </li>
-                <li>
-                    <img src="../../img/zhuanlan.jpg" alt="">
-                </li>
-                <li>
-                    <img src="../../img/zhuanlan.jpg" alt="">
+                <li v-for="(item,index) in selection" :key="index">
+                    <img :src="item.pic" alt="">
+                    <div class="mess">
+                          <b>严选推荐</b>
+                    </div>
                 </li>
             </ul>
             <div class="main">
                 <ul>
                     <li v-for="(item,index) in selection" :key="index">
-                        <div class="bg"></div>
+                        <img :src="item.pic" alt="">
                         <div class="mess">
                             <p><b>{{item.descript}}</b></p>
                             <p>{{item.title}}</p>
@@ -53,22 +41,13 @@ export default {
     data() {
         return {
             selection:[]
-            // bg:{
-            //     width:'100%',
-            //     height:'100%',
-            //     background:"url('+require(../../img/banner.jpg')+')",
-            //     backgroundRepeat: 'no-repeat',
-            //     backgroundPosition: 'center',
-            //     backgroundSize: 'cover',
-            //     filter: 'blur(1px)',
-            // }
         }
     },
     created() {
-        Axios.get('/api/small4/cms/news/list').then((res) =>{
+        Axios.get('https://api.it120.cc/small4/cms/news/list').then((res) =>{
             let { data } = res.data
             this.selection  = data
-            console.log(this.selection)
+            // console.log(this.selection)
         })
     }
 }

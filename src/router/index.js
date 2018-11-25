@@ -8,8 +8,12 @@ import Cut from '@/views/index/cutlist'
 import Cutdeatil from '@/views/index/cutdetail'
 //加入到购物车详情
 import addcartdetail from '@/views/index/addcartdetail'
-//拼团详情
-import group from '@/views/index/group'
+//详情页商品介绍和商品评价
+import shopmain from '@/views/index/shopmain'
+//详情页商品介绍
+import shopleft from '@/views/index/shopleft'
+//商品页详情页商品评价
+import shopright from '@/views/index/shopright'
 //精选主题   严选专栏   页面
 import Selectedlist from '@/views/index/Selectedlist'
 //专栏详情
@@ -21,9 +25,26 @@ import Gift from '@/views/index/gift'
 //分类
 import Sort from '@/views/sort/sort'
 //购物车
-import Cart from '@/views/cart/cart'
+import Cart from '@/views/order/cart'
 //确认订单
-import confirm from '@/views/cart/confirm'
+import confirm from '@/views/order/confirm'
+//订单列表
+import cartlist from '@/views/order/cartlist'
+//确认付款页面
+import payfor from '@/views/order/payfor'
+//待付款
+import daifukuan from '@/views/order/daifukuan'
+//待发货
+import daifahuo from '@/views/order/daifahuo'
+//待收货
+import daishouhuo from '@/views/order/daishouhuo'
+//待评价
+import daipingjia from '@/views/order/daipingjia'
+//已完成
+import yiwancheng from '@/views/order/yiwancheng'
+//评价
+import evaluate from '@/views/order/evaluate'
+
 //个人
 import Person from '@/views/person/person'
 //我的地址
@@ -34,12 +55,17 @@ import Balance from '@/views/person/balance'
 import newaddress from '@/views/person/newaddress'
 //订单列表
 import orderlist from '@/views/person/orderlist'
+//注册
+import reg from '@/views/person/reg'
 //登录
-import Login from '@/views/person/login'
+import log from '@/views/person/log'
+
+//购物车
+import gouwuche from '@/views/index/gouwuche'
 
 Vue.use(Router)
 export default new Router({
-  mode:'history',
+  // mode:'history',
   routes: [
     {
       path: '/',
@@ -53,6 +79,41 @@ export default new Router({
       path: '/cart',
       name: 'Cart',
       component: Cart
+    },
+    {
+      path: '/gouwuche',
+      component: gouwuche
+    },
+    {
+      path: '/cartlist',
+      component: cartlist,
+      redirect: '/cartlist',
+      children: [
+        {
+          path: '/daifukuan',
+          component: daifukuan
+        }, 
+        {
+          path: '/daifahuo',
+          component: daifahuo
+        },
+        {
+          path: '/daishouhuo',
+          component: daishouhuo
+        },
+        {
+          path: '/daipingjia',
+          component: daipingjia
+        },
+        {
+          path: '/yiwancheng',
+          component: yiwancheng
+        },
+      ]
+    },
+    {
+      path: '/payfor',
+      component: payfor
     },
     {
       path: '/person',
@@ -83,8 +144,18 @@ export default new Router({
       component: addcartdetail
     },
     {
-      path: '/group',
-      component: group
+      path: '/shopmain',
+      component: shopmain,
+      children: [
+        {
+          path: '/shopleft',
+          component: shopleft
+        },
+        {
+          path: '/shopright',
+          component: shopright
+        },
+      ]
     },
     {
       path: '/myaddress',
@@ -107,12 +178,20 @@ export default new Router({
       component: Selectdetail
     },
     {
-      path: '/login',
-      component: Login
+      path: '/reg',
+      component: reg
+    },
+    {
+      path: '/log',
+      component: log
     },
     {
       path: '/orderlist',
       component: orderlist
-    }  
+    },
+    {
+      path: '/evaluate',
+      component: evaluate
+    }
   ]
 })

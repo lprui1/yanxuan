@@ -1,0 +1,97 @@
+.login{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    position: relative;
+    //上一页
+    a.shang{ 
+        position: absolute;
+    }
+    .loginheader{
+        width:100%;
+        height:rem(130);
+        // background:#ccc;
+        h4{
+            text-align: center;
+            line-height:rem(130);
+        }
+    }
+    .loginsection{
+        width:100%;
+        height:100%;
+        background:#fff;
+        padding-top:rem(100);
+        ul{
+            width:100%;
+            li{
+                width:100%;
+                height:rem(120);
+                line-height:rem(120);
+                border-bottom:1px solid #999;
+                font-size:rem(50);
+                padding:0 rem(50);
+                display:flex;
+                justify-content: space-between;
+                label{
+                    width:20%;
+                    display: block;
+                }
+                input{
+                    border:none;
+                    outline:none;
+                    height:rem(116);
+                    width:80%;
+                    text-align: left;
+                }
+                button{
+                    width:rem(300);
+                    font-size:rem(36);
+                    outline:none;
+                    color:#fff;
+                    background:#b82925;
+                    border:none;
+                    border-radius:rem(10);
+                    height:rem(100);
+                    margin-top:rem(10);
+                }
+                img{
+                    width:rem(340);
+                    height:100%;
+                }
+                .tuxingma{
+                    background:#fff;
+                    border:1px solid #999;
+                    border-radius:0;
+                }
+                #tuxing,#yzm{
+                    width:50%;
+                }
+            }
+        }
+        p{
+            width:100%;
+            line-height:rem(100);
+            text-align: center;
+            font-size:rem(40);
+            color:#b82925;
+            button{
+                width:rem(500);
+                border:none;
+                outline:none;
+                height:rem(110);
+                border-radius:rem(50);
+                color:#fff;
+                background:#b82925;
+            }
+        }
+        .tishi,.xieyi{
+            color:#b82925;
+            text-indent:rem(50);
+            text-align: left;
+        }
+        .xieyi{
+            color:#000;
+        }
+    }
+}

@@ -74,8 +74,6 @@
                 }
                 span{
                     padding:rem(2) rem(13);
-                    border:rem(4) solid #7f7f7f;
-                    border-radius:100%;
                     color:#7f7f7f;
                     margin-left:rem(15);
                     font-weight:bold;
@@ -88,18 +86,22 @@
                 dl{
                     width:100%;
                     border-top:1px solid #ccc;
+                    padding:rem(21) rem(27);
                     a{
                         display: flex;
                         dt{
-                            padding:rem(21) rem(27);
+                            width:35%;  
                             img{
                                 width:rem(288);
                                 height:rem(288);
+                                display:block;
                             }
                         }
                         dd{
+                            width:65%;
                             padding:0;
                             h4{
+                                padding:0;
                                 font-size:rem(40);
                                 color:#333;
                                 text-align: left;
@@ -108,16 +110,24 @@
                                 font-size:rem(29);
                                 color:#999;
                             }
+                            .chao{
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                padding-top:rem(20);
+                            }
                             ul{
                                 border:none;
                                 display: flex;
-                                justify-content: space-between;
+                                flex:1;
                                 li{
+                                    width:20%;
                                     padding:0;
                                     border:none;
+                                    text-align:left;
                                     span{
                                         color:#999;
-                                        font-size:rem(23);
+                                        font-size:rem(30);
                                     }
                                     span.active{
                                         color:red;
@@ -149,8 +159,6 @@
                 }
                 span{
                     padding:rem(2) rem(13);
-                    border:rem(4) solid #7f7f7f;
-                    border-radius:100%;
                     color:#7f7f7f;
                     margin-left:rem(15);
                     font-weight:bold;
@@ -211,8 +219,6 @@
                 }
                 span{
                     padding:rem(2) rem(13);
-                    border:rem(4) solid #7f7f7f;
-                    border-radius:100%;
                     color:#7f7f7f;
                     margin-left:rem(15);
                     font-weight:bold;

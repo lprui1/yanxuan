@@ -26,14 +26,16 @@
         height:100%;
         -webkit-flex:1;
         overflow: auto;
+        position: relative;
         display: flex;
         justify-content: space-between;
-        padding-top:rem(33);
+        // background:red;
         //sortleft
         .sortleft{
             width:25%;
             height:100%;
             padding:rem(30) 0;
+            // background:green;
             border-right:1px solid #ccc;
             ul{
                 height:100%;
@@ -65,9 +67,12 @@
             height:100%;
             -webkit-flex:1;
             overflow:auto;
-            padding-top:rem(18);
+            position: absolute;
+            top:0;
+            right:0;
             //轮播图
             .swiper{
+                padding-top:rem(20);
                 width:100%;
                 .swiper-container{
                     width:100%;

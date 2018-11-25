@@ -30,8 +30,6 @@
         }
     }
     .siginsection{
-        // -webkit-flex:1;
-        // overflow:auto;
         //进度条
         .siginprogress{
             height:rem(210);
@@ -45,17 +43,15 @@
                     text-align:center;
                     float: left;
                     width: 14.28%;
-                    // height:rem(50);
-                    // line-height:rem(50);
-                    height:rem(0);
-                    line-height:rem(0);
+                    height:rem(10);
+                    line-height:rem(10);
                     border-bottom: 2px solid #ccc;
                     color: #999;
                     text-align: center;
                     font-weight: bold;
                     text-transform: capitalize;
                     position: relative;
-                    padding:rem(40) 0;
+                    padding:rem(50) 0;
                     span{
                         font-size:rem(30);
                         padding:rem(20) 0;

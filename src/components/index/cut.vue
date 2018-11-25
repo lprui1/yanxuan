@@ -3,7 +3,7 @@
         <h4 class="cut">
             <router-link to="/cutlist">
                 全民砍价
-                <span>&gt;</span>
+                <span class="iconfont icon-xiangyouyuanjiantouyoujiantouxiangyouxianxing"></span>
             </router-link>    
         </h4>
         <div class="cutlists">
@@ -14,7 +14,7 @@
                     </dt>
                     <dd>
                         <h4>{{item.name}}</h4> 
-                        <p>{{item.characteristic}}</p>
+                        <p class="chao">{{item.characteristic}}</p>
                         <ul>
                             <li>
                                 <span class="active">￥{{item.minPrice}}</span>
@@ -45,11 +45,12 @@ export default {
         }
     },
     created() {
-        Axios.get('/api/small4/shop/goods/list').then((res) =>{
+        Axios.get('https://api.it120.cc/small4/shop/goods/list').then((res) =>{
             let { data } = res.data
             this.kanjialist = data.filter(res => {
                 return res.kanjia
             })
+            this.$store.commit('kan',this.kanjialist)
         })
     }
 }

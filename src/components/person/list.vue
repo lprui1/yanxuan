@@ -21,7 +21,7 @@
                 </router-link>
             </li>
             <li>
-                <router-link to="/myaddress">
+                <router-link to="/gouwuche">
                     <span class="iconfont icon-shoucang"></span>
                     <p>我的收藏</p>
                 </router-link>

@@ -3,7 +3,7 @@
         <h4 class="topic">
             <router-link to="/Selectedlist">
                 精选主题
-                <span>&gt;</span>
+                <span class="iconfont icon-xiangyouyuanjiantouyoujiantouxiangyouxianxing"></span>
             </router-link>    
         </h4>
         <div class="main">
@@ -18,7 +18,7 @@
                     <p>{{item.title}}</p>
                 </dd>
             </dl>
-        </div>      
+        </div>     
     </div>
 </template>
 
@@ -31,7 +31,7 @@ export default {
         }
     },
     created() {
-        Axios.get('/api/small4/cms/news/list').then((res) =>{
+        Axios.get('https://api.it120.cc/small4/cms/news/list').then((res) =>{
             let { data } = res.data
             this.selection  = data
         })

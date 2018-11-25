@@ -178,27 +178,62 @@
                         }
                     }
                 }
+                //评价
+                .pingjia{
+                    width:100%;
+                    dl{
+                        width:100%;
+                        border-bottom:1px solid #999;
+                        display: flex;
+                        padding:rem(42) rem(42);
+                        dt{
+                            img{
+                                width:rem(144);
+                                height:rem(144);
+                                border-radius:100%;
+                            }
+                        }
+                        dd{
+                            padding-left:rem(50);
+                            p{
+                                font-size:rem(40);
+                                line-height:rem(64);
+                                .ping{
+                                    background:#b5272d;
+                                    color:#fff;
+                                    margin-left:rem(40);
+                                    padding:0 rem(40);
+                                    border-radius:rem(10);
+                                }
+                                span{
+                                    color:#999;  
+                                }
+                            }
+                            
+                        }
+                    }
+                }
             }
         }
         //砍价的页脚
         .cutfooter{
             width:100%;
-            height:rem(136);
+            height:rem(145);
             background:#b5272d;
+            z-index:121;
             p{
-                 text-align:center;
-                
-                 a{
-                     color:#fff;
-                     font-size:rem(37);
-                 }
+                text-align:center;
+                line-height:rem(145);
+                color:#fff;
+                font-size:rem(37);
             }
             
         }
         //加入购物车页脚
         .addcartfooter{
             width:100%;
-            height:rem(161);
+            height:rem(145);
+            z-index:120;
             background:#fff;
             display: flex;
             justify-content: space-between;
@@ -231,8 +266,12 @@
             }
             .right{
                 font-size:rem(39);
+                display: flex;
+                justify-content: space-between;
                 span{
+                    padding-top:rem(50);
                     padding-right:rem(50);
+                    // text-align: center;
                 }
                 button{
                     width:rem(312);
@@ -249,30 +288,34 @@
             width:100%;
             height:rem(145);
             background:#fff;
+            z-index:120;
             display: flex;
             justify-content: space-between;
             //左边   
             .left{
-                width:26%;
+                width:45%;
                 padding:0;
                 background:#fff;
                 li{
+                    width:50%;
+                    text-align: center;
                     line-height:100%;
                     border-right:rem(2) solid #dedede;
-                    padding:rem(48) rem(40);
+                    padding:rem(48) rem(20);
                     color:#999;
+                    float: left;
                     span{
                         font-size:rem(72);   
                     }
-                }
-                
+                }  
             }
             //右边
             .right{
-                width:70%;
+                width:55%;
                 display:flex;
                 justify-content: space-between;
                 background:#fff;
+                // background:green;
                 padding:0;
                 li{
                     width:50%;
@@ -379,11 +422,17 @@
                 display:flex;
                 justify-content: space-between;
                 box-sizing:border-box;
-                p{
+                p:first-child{
                     font-size:rem(42);
-                    line-height:rem(98);
+                }
+                p:last-child{
+                    width:40%;
+                    font-size:rem(42);
                     button{
                         font-size:rem(28);
+                        float: left;
+                        height:rem(98);
+                        margin-top:rem(-25);
                         padding:rem(28) rem(50);
                         background:#fff;
                         border:none;

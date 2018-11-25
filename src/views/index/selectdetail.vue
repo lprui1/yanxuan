@@ -22,7 +22,7 @@ export default {
     },
     created() {
         let { id } = this.$route.params
-        Axios.get('/api/small4/cms/news/detail?id='+id).then((res) =>{
+        Axios.get('https://api.it120.cc/small4/cms/news/detail?id='+id).then((res) =>{
             let { data } = res.data
             this.newsdetail = data
             console.log(this.newsdetail)

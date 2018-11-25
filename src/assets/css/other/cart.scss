@@ -13,6 +13,7 @@
         position:relative;
         //商品列表头部
         .shopheader{
+            z-index: 22222;
             padding:rem(30) 0 rem(45) 0;
             background:#fff;
             border-bottom:1px solid #ccc;
@@ -33,8 +34,7 @@
             height:100%;
             flex:1;
             overflow: auto;
-            // background:#fff;
-            // padding:rem(50) 0;
+            margin-top:rem(120);
             //没有商品的状态
             .notshop{
                 width:100%;
@@ -62,16 +62,21 @@
             //有状态下的列表
             .shoplist{
                 position:relative;
-                background:#fff;
+                width:100%;
+                // background: 
                 //列表
                 dl{
+                    width:120%;
+                    height:rem(320);
+                    background:#fff;
+                    overflow: hidden;
                     display: flex;
-                    border-bottom:1px solid #fbfbfb;
+                    justify-content: space-between;
+                    border-bottom:1px solid #ccc;
                     padding:rem(42);
                     position: relative;
                     dt{
-                        width:40%;
-                        padding-right:rem(20);
+                        width:35%;
                         display: flex;
                         justify-content: space-between;
                         .tui-checkbox{
@@ -81,39 +86,60 @@
                         img{
                             width:rem(228);
                             height:rem(228);
-                            // height:rem(228);
                         }
                     }
                     dd{
-                        width:60%;
-                        -webkit-flex:1;
+                        width:85%;
                         padding:rem(11) 0 0 rem(30);
-                    p:first-child{
-                        font-size:rem(38);
-                    } 
-                    p:nth-child(2){
-                        b{
-                            font-size:rem(26);
-                            color:#b5272d;
-                        }
-                        s{
-                           font-size:rem(26);
-                           padding-left:rem(30); 
-                        }
-                    }
-                    p:last-child{
-                        position: absolute;
-                        right:rem(45);
-                        bottom:rem(35);
-                            button{
-                                background:#fff;
-                                outline:none;
-                                border:none;
-                                border:1px solid #ccc;
-                                font-size:rem(30);
-                                padding:rem(26);
+                        display: flex;
+                        justify-content: space-between; 
+                        #middle{
+                            width:78%;
+                            p.name{
+                                font-size:rem(38);
+                            } 
+                            p:nth-child(2){
+                                b{
+                                    font-size:rem(26);
+                                    color:#b5272d;
+                                }
+                                s{
+                                font-size:rem(26);
+                                padding-left:rem(30); 
+                                }
                             }
-                    }
+                            p.btn{
+                                position: absolute;
+                                right:rem(245);
+                                bottom:rem(35);
+                                    button{
+                                        background:#fff;
+                                        outline:none;
+                                        border:none;
+                                        float: left;
+                                        border:1px solid #ccc;
+                                        font-size:rem(30);
+                                        padding:rem(26);
+                                    }
+                            }
+                        }
+                        //删除
+                        .del{
+                            width:20%;
+                            padding-top:rem(50);
+                            button{
+                                width:100%;
+                                height:rem(100);
+                                border:none;
+                                outline:none;
+                                font-size:rem(40);
+                                text-align: center;
+                                line-height:100%;
+                                background:#b82925;
+                                color:#fff;
+                            }
+                            
+                        }
                     }
                 }
             }
@@ -210,14 +236,18 @@
             .checkright{
                 width:80%;
                 height:rem(146);
-                text-align: right;
+                display: flex;
+                justify-content: space-between;
                 b{
+                    width:50%;
+                    text-align:center;
                     font-size:rem(37);
                     color:#a42c2e;
-                    padding-right:rem(47);
+                    padding-top:rem(57);
                 }
                 button{
-                    width:rem(346);
+                    width:50%;
+                    // width:rem(346);
                     height:100%;
                     background:#b82925;
                     font-size:rem(42);

@@ -1,0 +1,104 @@
+.orderstatus{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    a.shang{ 
+        position: absolute;
+    }
+    //头部
+    .daifukuanheader{
+        width:100%;
+        background:#fff;
+        z-index:22222;
+        h4{
+            font-size:rem(38);
+            line-height:rem(118);
+            text-align:center;
+        }
+        ul{
+            width:100%;
+            display: flex;
+            justify-content: space-between;
+            a{
+                width:20%;
+                li{ 
+                    color:#999;
+                    text-align: center;
+                    font-size:rem(37);
+                    padding:rem(40) 0;   
+                }
+            }
+            .router-link-active{
+                border-bottom:rem(6) solid red;
+            }
+        }
+    }
+}
+.haslist{
+    width:100%;
+    height:100%;
+    padding-top:rem(250);
+        ul{
+            li{
+                margin-top:rem(30);
+                width:100%;
+                background:#fff;
+                font-size:rem(33);
+                p{
+                    padding:0 rem(33);
+                    border-bottom:1px solid #ccc;
+                    height:rem(120);
+                    display:flex;
+                    justify-content: space-between;
+                    line-height:rem(120);
+                    span.yanse{
+                        // width:50%;
+                        color:red;
+                    }
+                }
+                p:nth-child(4){
+                    width:100%;
+                    // height:rem(100);
+                    display: flex;
+                    justify-content: space-between; 
+                    span#btns{
+                        width:50%;
+                        text-align: right;
+                        display: flex;
+                        justify-content: space-between;
+                        button{
+                            height:rem(80);
+                            border:none;
+                            outline:none;
+                            margin-top:rem(20);
+                            // height:rem(100);
+                            background:#fff;
+                            border-radius:rem(10);
+                            // border:2px solid #9b2730;
+                            padding:rem(10) rem(47);
+                        }
+                        button:first-child{
+                            border:1px solid #ccc;
+                            color:#ccc;
+                        }
+                        button:last-child{
+                            border:1px solid red;
+                            color:red;
+                        }
+                    }
+                }
+                p.picture {
+                    height:rem(220);
+                    padding:rem(20) rem(47);
+                    display: flex;
+                    border-bottom:1px solid #ccc;
+                    img{
+                        width:rem(170);
+                        height:rem(170);
+                        margin-right:rem(20);
+                    }
+                }
+            }
+        }
+}

@@ -1,8 +1,8 @@
 <template>
     <div class="indexfooter">
         <ul>
-          <li class="active">
-            <router-link to="/">
+          <li>
+            <router-link to="/" exact>
                 <p><span class="iconfont icon-shouye"></span></p>
                 <b>首页</b>
             </router-link>

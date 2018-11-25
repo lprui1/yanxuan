@@ -1,0 +1,54 @@
+.log{
+    width:100%;
+    height:100%;
+    background:#fff;
+    position: relative;
+    //上一页
+    a.shang{ 
+        position: absolute;
+    }
+    .logheader{
+        width:100%;
+        height:rem(130);
+        h4{
+            text-align: center;
+            line-height:rem(130);
+        }
+    }
+    .logul{
+        padding-top:rem(100);
+        li{
+            width:100%;
+            height:rem(120);
+            line-height:rem(120);
+            border-bottom:1px solid #999;
+            font-size:rem(50);
+            padding:0 rem(50);
+            display:flex;
+            justify-content: space-between;
+            input{
+                border:none;
+                outline:none;
+                height:rem(116);
+                width:80%;
+                text-align: left;
+            }
+        }
+    }
+    p{
+        width:70%;
+        text-align: center;
+        margin: 0 auto;
+        padding-top:rem(100);
+        font-size:rem(50);
+        button{
+            width:100%;
+            height:rem(100);
+            background:#b82925;
+            border:none;
+            outline:none;
+            color:#fff;
+            border-radius:rem(50);
+        }
+    }
+}
