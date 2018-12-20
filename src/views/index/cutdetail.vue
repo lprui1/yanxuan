@@ -16,7 +16,7 @@
                     </dt>
                     <dd>
                         <p>{{kanjiaInfo.name}}</p>
-                        <p><span>底价 ￥{{this.cutLi.minPrice}}</span><s>原价 ￥{{this.cutLi.curPrice}}</s></p>
+                        <p><span>底价 ￥{{this.CUTLI.minPrice}}</span><s>原价 ￥{{this.CUTLI.curPrice}}</s></p>
                     </dd>
                 </dl>
                 <p>当前价259元，已砍0.00元</p>
@@ -34,9 +34,9 @@
             </div>
             <!--好友砍价-->
             <div class="friend">
-                <p v-if="cuts">没有数据</p>
+                <p v-if="!cuts">没有数据</p>
                 <p class="help">{{this.cutLi.helpNumber}}名好友帮砍</p>
-                <dl v-if="!cuts">
+                <dl v-if="cuts">
                     <dt>
                         <img src="../../img/add1.jpg" alt="">
                         <div class="cutmess">
@@ -62,8 +62,9 @@ export default {
             cutLi:{},
             kanjiaIn:[],
             kanjiaInfo:{},
+            CUTLI:{},
             CUTP:{},
-            cuts:false,
+            cuts:true,
             msg:'自己先砍一刀'
         }
     },
@@ -73,22 +74,33 @@ export default {
         }
     },
     created() {
-        console.log(this.$store.state)
-        // console.log(this.$store.state.faqilist)
-        //我的砍价
+        // console.log(this.$store.state.KJlist)
+        //发起砍价
         let params = new URLSearchParams();
-        params.append('kjid',this.$store.state.faqilist)
-        params.append('token',this.$cookie.get('token'))
-        Axios.post('https://api.it120.cc/small4/shop/goods/kanjia/my',params).then(res => {
-            //砍价参数
+        params.append('kjid',this.$store.state.faqilist);
+        params.append('token',this.$cookie.get('token'));
+        Axios.post('https://api.it120.cc/small4/shop/goods/kanjia/join',params).then(res => {
+            this.CUTLI = res.data.data
             var kjl = this.$store.state.KJlist
-            this.cutLi = res.data.data
-            console.log(res)
             this.kanjiaIn = kjl.filter(item => {
                 return item.id === this.cutLi.goodsId
             })
             this.kanjiaInfo = this.kanjiaIn[0];
-        })   
+        })
+        //我的砍价
+        // let fqkj = this.$store.state.faqilist;
+        // params.append('kjid',this.$store.state.faqilist)
+        // params.append('token',this.$cookie.get('token'))
+        // Axios.post('https://api.it120.cc/small4/shop/goods/kanjia/my',params).then(res => {
+        //     //砍价参数
+        //     var kjl = this.$store.state.KJlist
+        //     this.cutLi = res.data.data
+        //     console.log(res)
+        //     this.kanjiaIn = kjl.filter(item => {
+        //         return item.id === this.cutLi.goodsId
+        //     })
+        //     this.kanjiaInfo = this.kanjiaIn[0];
+        // })   
     },
     methods: {
         //后退一步

@@ -71,6 +71,11 @@
                         <div class="content" v-if="Products">
                             <div class="contentmain" v-html="this.introduce"></div>
                         </div>
+                        
+                        <!--暂无评价-->
+                        <!-- <div class="zwpj">
+                            <p>暂无评价</p>
+                        </div> -->
                         <div class="pingjia" v-if="!Products">
                             <dl v-for="(item,index) in pingjiasj" :key="index">
                                 <dt>
@@ -78,7 +83,7 @@
                                 </dt>
                                 <dd>
                                     <p>何小杰<span class="ping">{{item.goods.goodReputationStr}}</span></p>
-                                    <p>系统默认好评</p>
+                                    <p>{{item.goods.goodReputationRemark}}</p>
                                     <p><span>{{item.goods.dateReputation}}</span></p>
                                     <p><span>{{item.goods.property}}</span></p>
                                 </dd>
@@ -295,7 +300,6 @@ export default {
         },
         //点击遮罩层里的购物车,加到购物车
         Addcart(item) {
-            // console.log(item)
             this.$store.commit('Addcart',item);
             this.$router.push({name:'Cart'});
              // //选择规格和尺寸
@@ -320,7 +324,6 @@ export default {
                     return item.goodsId == id
                 })
                 this.fqkj = faqi
-                // console.log(faqi)
                 this.$router.push({path:'/cutdetail'})
                 this.$store.commit('faqikj',this.fqkj[0].id)
             })
@@ -337,7 +340,7 @@ export default {
             params.append('goodsId',id)
             Axios.post('https://api.it120.cc/small4/shop/goods/reputation',params).then(res => {
                 this.pingjiasj = res.data.data
-                // console.log(this.pingjiasj)
+                console.log(this.pingjiasj)
             })
         },
         //点击立即购买

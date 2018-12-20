@@ -75,9 +75,7 @@ let store = new Vuex.Store({
         //发起砍价
         faqikj(state,payload) {
             state.faqilist = payload
-            console.log(payload)
-            // console.log('aaaa')
-            // console.log(state.faqilist)
+            console.log(state.faqilist)
         },
         //砍价参数
         kan(state,payload) {

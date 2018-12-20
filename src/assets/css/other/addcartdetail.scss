@@ -181,6 +181,14 @@
                 //评价
                 .pingjia{
                     width:100%;
+                    height:100%;
+                    background:#fff;
+                    .zwpj{
+                        padding:rem(40) 0;
+                        p{
+                            text-align: center;
+                        }
+                    }
                     dl{
                         width:100%;
                         border-bottom:1px solid #999;
